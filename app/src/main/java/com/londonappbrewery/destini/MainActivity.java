@@ -10,9 +10,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     // TODO: Steps 4 & 8 - Declare member variables here:
-    TextView storyTextView = findViewById(R.id.storyTextView);
-    Button topButton = findViewById(R.id.buttonTop);
-    Button bottomButton = findViewById(R.id.buttonBottom);
+    TextView storyTextView;
+    Button topButton;
+    Button bottomButton;
 
 
     @Override
@@ -22,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         // TODO: Step 5 - Wire up the 3 views from the layout to the member variables:
+        storyTextView = findViewById(R.id.storyTextView);
+        topButton = findViewById(R.id.buttonTop);
+        bottomButton = findViewById(R.id.buttonBottom);
+
+        storyTextView.setText(R.string.T1_Story);
+
+        // TODO: Steps 6, 7, & 9 - Set a listener on the top button:
         topButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,21 +36,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        // TODO: Steps 6, 7, & 9 - Set a listener on the bottom button:
         bottomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("destini", "onClick: bottom button clicked");
             }
         });
-
-        // TODO: Steps 6, 7, & 9 - Set a listener on the top button:
-
-
-
-
-        // TODO: Steps 6, 7, & 9 - Set a listener on the bottom button:
-
 
     }
 }
