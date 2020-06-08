@@ -2,10 +2,15 @@ package com.londonappbrewery.destini;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     // TODO: Steps 4 & 8 - Declare member variables here:
+    TextView storyTextView = findViewById(R.id.storyTextView);
+    Button topButton = findViewById(R.id.buttonTop);
+    Button bottomButton = findViewById(R.id.buttonBottom);
 
 
     @Override
