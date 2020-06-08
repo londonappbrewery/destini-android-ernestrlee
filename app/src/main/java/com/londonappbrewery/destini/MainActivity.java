@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     TextView storyTextView;
     Button topButton;
     Button bottomButton;
+    int mStoryIndex = 1;
 
 
     @Override
@@ -33,6 +34,24 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("destini", "onClick: top button clicked");
+
+                switch (mStoryIndex){
+                    case 1:
+                    case 2:
+                        storyTextView.setText(R.string.T3_Story);
+                        topButton.setText(R.string.T3_Ans1);
+                        bottomButton.setText(R.string.T3_Ans2);
+                        mStoryIndex = 3;
+                        break;
+
+                    case 3:
+                        storyTextView.setText(R.string.T6_End);
+                        topButton.setText("");
+                        bottomButton.setText("");
+                        mStoryIndex = 6;
+                    default:
+                        break;
+                }
             }
         });
 
@@ -41,6 +60,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.d("destini", "onClick: bottom button clicked");
+
+                switch (mStoryIndex){
+                    case 1:
+                        storyTextView.setText(R.string.T2_Story);
+                        topButton.setText(R.string.T2_Ans1);
+                        bottomButton.setText(R.string.T2_Ans2);
+                        mStoryIndex = 2;
+                        break;
+                    case 2:
+                        storyTextView.setText(R.string.T3_Story);
+                        topButton.setText("");
+                        bottomButton.setText("");
+                        mStoryIndex = 4;
+                        break;
+                    case 3:
+                        storyTextView.setText(R.string.T5_End);
+                        topButton.setText("");
+                        bottomButton.setText("");
+                        mStoryIndex = 5;
+                    default:
+                        break;
+                }
             }
         });
 
